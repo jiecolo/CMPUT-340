@@ -15,3 +15,24 @@ end
 function pos=f(M,theta)
     pos = M(1)*Rz(theta(3))*Ry(theta(2))*Rx(theta(1))*M(2)*Rx(theta(4))*M(3)*[0 0 0 1]';
 end
+
+function R=Rx(theta)
+    R = [1 0 0 0
+        0 cos(theta) -sin(theta) 0
+        0 sin(theta) cos(theta) 0
+        0 0 0 1];
+end
+
+function R=Ry(theta)
+    R = [cos(theta) 0 sin(theta) 0
+        0 1 0 0
+        -sin(theta) 0 cos(theta) 0
+        0 0 0 1];
+end
+
+function R=Rz(theta)
+    R = [cos(theta) -sin(theta) 0 0
+        sin(theta) cos(theta) 0 0
+        0 0 1 0
+        0 0 0 1];
+end

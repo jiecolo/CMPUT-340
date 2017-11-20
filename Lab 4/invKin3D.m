@@ -5,7 +5,7 @@ function theta=invKin3D(M,theta,pos)
         s = J\-(f-pos);
         theta = theta+s;
             
-        if s < 0.00001
+        if abs(norm(pos-f)) < 0.00001
             break
         end
     end
