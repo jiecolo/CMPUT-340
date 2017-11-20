@@ -9,7 +9,5 @@ Also, in some cases, simply computing the analytic derivative has an error
 since the values used in computing are rounded
 
 The comparison between Newton and Broyden:
-From experiment, the robot performance in Newton's Method tends to be
-moving more accurate towards desired location compared to Broyden's Method.
-Also, Newton Mode takes less clicks than Broyden Mode if the distance
-is far from the previous position (2 vs 5)
+They are basically the same, except that Broyden's Method occasionally
+catches singular matrix exception, which will move awkwardly.
